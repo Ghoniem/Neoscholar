@@ -1,0 +1,49 @@
+
+\usepackage[letterpaper,margin=1in,footskip=.5in]{geometry}
+\usepackage{kpfonts}
+\renewcommand{\familydefault}{\sfdefault}
+\normalfont 
+
+%Fonts
+\usepackage[scaled]{helvet}
+\renewcommand\familydefault{\sfdefault} 
+\usepackage[T1]{fontenc}
+
+\usepackage{amsmath,fullpage,color,epsfig,bm,wrapfig,harvard,graphicx,epstopdf,float,subfig,amsthm}
+\usepackage[    pdftex,    colorlinks,    hyperindex,    plainpages=false,    bookmarksopen,    bookmarksnumbered  ]{hyperref}
+\usepackage[bold]{hhtensor}
+\usepackage{nicefrac}
+
+\usepackage[colorlinks]{hyperref} 
+\hypersetup{ %Sets up hyperref
+    %bookmarks=true,         % show bookmarks bar?
+    %unicode=false,          % non-Latin characters in Acrobat?s bookmarks
+    %pdftoolbar=true,        % show Acrobat?s toolbar?
+    %pdfmenubar=true,        % show Acrobat?s menu?
+    %pdffitwindow=false,     % window fit to page when opened
+    %pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={Proposal},    % title
+    pdfauthor={Jaime Marian},     % author
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=red,          % color of internal links
+%    linkcolor=black,          % color of internal links
+    citecolor=blue,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=cyan           % color of external links
+}
+\usepackage{cite}
+\usepackage{enumitem}
+\usepackage{authblk}
+\usepackage{multirow}
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+\addtolength{\textwidth}{.25in}
+\addtolength{\topmargin}{.1in}
+\addtolength{\textheight}{.25in}
+\usepackage{tikz}
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,calc,3d,er,trees}
+\usepackage{enumitem} %for itemize left margin
+\usepackage{overpic}
+\usepackage{float}
+\usepackage{cases}
+\graphicspath{{./Figures/}}
