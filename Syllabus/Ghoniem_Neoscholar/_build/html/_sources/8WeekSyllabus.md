@@ -13,9 +13,12 @@ He is a fellow of the American Nuclear Society, the American Academy of
 Mechanics, the American Society of Mechanical Engineers, the Japan
 Society for Promotion of Science, and The Materials Research Society.
 
-::: wrapfigure
-r.4 ![image](Nasr-Pic){width="40%"}
-:::
+:::{wrapfigure} r.4
+
+![image](Nasr-Pic){width="40%"}
+
+:::
+
 
 He was the general chair of the Second International Multiscale
 Materials Modeling Conference in 2004 and the chair of the 19$^{th}$
@@ -136,9 +139,7 @@ learning experience and understanding. These include:
 
 # Course Schedule
 
-## Week 1 {#week-1 .unnumbered}
-
--   Class orientation.
+## Week 1 {#w Class orientation.
 
 -   Global energy use.
 
@@ -152,9 +153,9 @@ learning experience and understanding. These include:
 
 -   Fuels & combustion.
 
-## Week 2 {#week-2 .unnumbered}
+## Week 2 {#week-2 }
 
--   Heat engines.
+- es.
 
 -   Heat pumps.
 
@@ -175,9 +176,9 @@ learning experience and understanding. These include:
 
 -   Reading Assignment: Chapter 3 - Solar-Thermal Energy.
 
-## Week 3 {#week-3 .unnumbered}
+## Week 3 {#week-3 }
 
--   Solar photovoltaics basic principles
+-   Solar phoasic principles
 
 -   Polycrystalline and thin film photovolatics.
 
@@ -187,11 +188,11 @@ learning experience and understanding. These include:
 
 -   Reading Assignment: Chapter 4 - Solar Photovoltaics.
 
-## Week 4 {#week-4 .unnumbered}
+## Week 4 {#week-4 }
 
 -   Bioenergy sources
 
--   Combustion of solid biomass.
+-n of solid biomass.
 
 -   Fuel production (gaseous and liquid).
 
@@ -199,11 +200,11 @@ learning experience and understanding. These include:
 
 -   Reading Assignment: Chapter 5 - Bioenergy.
 
-## Week 5 {#week-5 .unnumbered}
+## Week 5 {#week-5 }
 
 -   History of water power.
 
--   Hydro resources.
+-   Hys.
 
 -   Types of hydroelectric plants.
 
@@ -217,11 +218,9 @@ learning experience and understanding. These include:
 
 -   Project orientation and team assignments.
 
-## Week 6 {#week-6 .unnumbered}
+## Week 6 {#week-6 }
 
-Discussion and selection of research projects:
-
-1.  Design & operation of solar-thermal or solar-voltaic systems;
+Discussion and selection of research projects: & operation of solar-thermal or solar-voltaic systems;
 
 2.  Design of energy storage systems;
 
@@ -232,11 +231,11 @@ Discussion and selection of research projects:
 5.  Issues for integration & economics of renewable energy systems. and
     references.
 
-## Week 7 {#week-7 .unnumbered}
+## Week 7 {#week-7 }
 
 -   Technical writing tutorial.
 
--   Research project preliminary report outline.
+-   Research project preort outline.
 
 -   Discussion of research resources and references.
 
@@ -244,13 +243,13 @@ Discussion and selection of research projects:
 
 -   Guided discussions on team projects.
 
-## Week 8 {#week-8 .unnumbered}
+## Week 8 {#week-8 }
 
 -   Team project presentations.
 
 -   Research reports discussions.
 
--   Research reports turned in and graded.
+ reports turned in and graded.
 
 # Project Description
 

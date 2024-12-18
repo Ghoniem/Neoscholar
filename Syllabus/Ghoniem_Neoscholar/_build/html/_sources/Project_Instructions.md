@@ -1,6 +1,8 @@
-# Silicon-Based Solar Cell Technology
+# Project Instructions
 
-##  Project Statement
+## Silicon-Based Solar Cell Technology
+
+###  Project Statement
 
 Silicon-based solar cell technology is a cornerstone of modern renewable
 energy systems, providing an efficient and sustainable means to harness
@@ -29,7 +31,7 @@ lifecycle emissions. By the end of the project, students will have a
 comprehensive understanding of silicon-based solar cell technology and
 its pivotal role in the transition to sustainable energy systems.
 
-## Physics of Silicon-Based Solar Cells
+#### Physics of Silicon-Based Solar Cells
 
 Students will dive into the underlying physics that govern silicon solar
 cell performance, including:
@@ -56,7 +58,7 @@ data and the silicon bandgap energy, they can:
 -   Create visualizations of solar spectrum utilization, including
     absorbed vs. unused energy.
 
-## Manufacturing Process
+### Manufacturing Process
 
 Students will examine the manufacturing steps for silicon solar cells,
 including:
@@ -72,7 +74,7 @@ including:
 -   Efficiency vs. cost trade-offs in advanced technologies like PERC
     (Passivated Emitter and Rear Cell).
 
-## Applications
+### Applications
 
 Students will study the widespread applications of silicon-based solar
 cells.
@@ -86,7 +88,7 @@ cells.
 -   Emerging areas, including solar integration into wearables and
     buildings (e.g., building-integrated photovoltaics, BIPV).
 
-## Economics
+### Economics
 
 Students will assess the economic aspects of silicon-based solar cell
 technology.
@@ -100,7 +102,7 @@ technology.
 -   Comparison of silicon-based solar cells to other technologies like
     thin-film or perovskite solar cells.
 
-## Environmental Impact {#environmental-impact .unnumbered}
+### Environmental Impact {#environmental-impact }
 
 Students will analyze the environmental implications:
 
@@ -113,7 +115,7 @@ Students will analyze the environmental implications:
 
 -   Role of solar energy in reducing the reliance on fossil fuels.
 
-## Suggested Python Project
+### Suggested Python Project
 
 **Title:** *Solar Cell Efficiency Simulator*\
 **Objective:** Develop a Python program that calculates and visualizes
@@ -149,14 +151,14 @@ the theoretical efficiency of a silicon solar cell.\
 
     -   Recommendations for optimizing silicon solar cell designs.
 
-## Equations of the Model
+#### Equations of the Model
 
 This document describes the equations used in a practical solar cell
 efficiency model that incorporates key real-world loss mechanisms. The
 model extends the Shockley-Queisser limit with adjustments for
 reflection, recombination, resistive, and thermalization losses.
 
-## Solar Spectrum
+#### Solar Spectrum
 
 The spectral irradiance $I(E)$ of sunlight is modeled using Planck's
 law:
@@ -173,13 +175,13 @@ where:
 
 -   $k$: Boltzmann constant (J/K).
 
-## Absorption of Photons
+#### Absorption of Photons
 
 Photons with energy $E \geq E_g$ (bandgap energy of the material) are
 absorbed. The absorbed spectrum is given by:
 $$I_{\text{absorbed}}(E) = I(E) \quad \text{for} \quad E \geq E_g$$
 
-## Thermalization Loss
+#### Thermalization Loss
 
 Photons with an energy higher than the band gap ($E > E_g$) lose their
 excess energy as heat. The effective photon energy contributing to
@@ -188,7 +190,7 @@ $$E_{\text{effective}} = \min(E, E_g) \cdot \eta_{\text{thermalization}}$$
 where $\eta_{\text{thermalization}}$ is the thermalization efficiency
 (e.g., 80%).
 
-## Generated Power
+#### Generated Power
 
 The generated power $P_{\text{gen}}$ is obtained by integrating the
 absorbed photon energy over the spectrum:
@@ -202,18 +204,18 @@ where:
 
 -   $\eta_{\text{resistance}}$: Fractional resistive loss (e.g., 5%).
 
-## Total Incident Power
+#### Total Incident Power
 
 The total incident power $P_{\text{total}}$ is the integral of the
 entire solar spectrum:
 $$P_{\text{total}} = \int_0^\infty E \cdot I(E) \, dE$$
 
-## Practical Efficiency
+#### Practical Efficiency
 
 The practical efficiency $\eta$ is the ratio of generated power to total
 incident power: $$\eta = \frac{P_{\text{gen}}}{P_{\text{total}}}$$
 
-## References
+#### References
 
 1.  Shockley, W., & Queisser, H. J. (1961). \"Detailed Balance Limit of
     Efficiency of p-n Junction Solar Cells.\" *Journal of Applied
@@ -230,9 +232,9 @@ incident power: $$\eta = \frac{P_{\text{gen}}}{P_{\text{total}}}$$
     [Online
     Article](https://science.nasa.gov/astrophysics/focus-areas/how-do-solar-cells-work)
 
-# Project Phases {#project-phases .unnumbered}
+#### Project Phases {#project-phases }
 
-## Phase 1: Literature Review {#phase-1-literature-review .unnumbered}
+##### Phase 1: Literature Review {#phase-1-literature-review }
 
 **Topics to cover:**
 
@@ -250,7 +252,7 @@ incident power: $$\eta = \frac{P_{\text{gen}}}{P_{\text{total}}}$$
 **Deliverable:** A written summary (2--3 pages) highlighting the
 principles of silicon photovoltaics and key advancements.
 
-## Phase 2: Manufacturing Processes {#phase-2-manufacturing-processes .unnumbered}
+##### Phase 2: Manufacturing Processes {#phase-2-manufacturing-processes }
 
 **Activities:**
 
@@ -263,7 +265,7 @@ principles of silicon photovoltaics and key advancements.
 **Deliverable:** A detailed report on manufacturing processes and their
 role in enhancing solar cell performance.
 
-## Phase 3: Simulation and Analysis {#phase-3-simulation-and-analysis .unnumbered}
+##### Phase 3: Simulation and Analysis {#phase-3-simulation-and-analysis }
 
 **Activities:**
 
@@ -279,7 +281,7 @@ role in enhancing solar cell performance.
 **Deliverable:** A Python script and accompanying graphs illustrating
 the efficiency simulation results.
 
-## Phase 4: Economic and Environmental Analysis {#phase-4-economic-and-environmental-analysis .unnumbered}
+##### Phase 4: Economic and Environmental Analysis {#phase-4-economic-and-environmental-analysis }
 
 **Activities:**
 
@@ -291,7 +293,7 @@ the efficiency simulation results.
 **Deliverable:** A comparative analysis report detailing economic
 feasibility and environmental impacts.
 
-## Phase 5: Report and Presentation {#phase-5-report-and-presentation .unnumbered}
+##### Phase 5: Report and Presentation {#phase-5-report-and-presentation }
 
 **Final Report:**
 
@@ -309,7 +311,7 @@ feasibility and environmental impacts.
 
 **Presentation:** A 10-minute presentation summarizing the project.
 
-# Key Learning Outcomes {#key-learning-outcomes .unnumbered}
+#### Key Learning Outcomes {#key-learning-outcomes }
 
 -   Understanding the principles and applications of silicon
     photovoltaics.
@@ -323,7 +325,7 @@ feasibility and environmental impacts.
 -   Awareness of the economic and environmental trade-offs in solar
     technology.
 
-# Tools and Resources {#tools-and-resources .unnumbered}
+#### Tools and Resources {#tools-and-resources }
 
 **Python Libraries:**
 
@@ -338,7 +340,7 @@ feasibility and environmental impacts.
 -   Websites: National Renewable Energy Laboratory (NREL), International
     Renewable Energy Agency (IRENA).
 
-# Potential Extensions {#potential-extensions .unnumbered}
+#### Potential Extensions {#potential-extensions }
 
 -   Explore tandem or multi-junction solar cell designs.
 
@@ -348,17 +350,17 @@ feasibility and environmental impacts.
 -   Evaluate hybrid systems combining silicon cells with perovskite
     layers.
 
-# Grading Rubric for Solar Project {#grading-rubric-for-solar-project .unnumbered}
+### Grading Rubric for Solar Project {#grading-rubric-for-solar-project }
 
 **Total Points: 100**\
 The grading is divided into **Project Report (70 points)** and **Final
 Presentation (30 points)**.
 
-## 1. Project Report (70 points) {#project-report-70-points .unnumbered}
+### 1. Project Report (70 points) {#project-report-70-points }
 
 The report will be assessed based on the following components:
 
-### A. Literature Review (15 points) {#a.-literature-review-15-points .unnumbered}
+#### A. Literature Review (15 points) {#a.-literature-review-15-points }
 
 -   **Comprehensiveness (10 points)**:
 
@@ -371,7 +373,7 @@ The report will be assessed based on the following components:
 
     -   Written clearly and logically, with well-organized sections.
 
-### B. Manufacturing Processes (15 points) {#b.-manufacturing-processes-15-points .unnumbered}
+#### B. Manufacturing Processes (15 points) {#b.-manufacturing-processes-15-points }
 
 -   **Detail and Accuracy (10 points)**:
 
@@ -383,7 +385,7 @@ The report will be assessed based on the following components:
 
     -   Data is well-organized using tables, graphs, or illustrations.
 
-### C. Python Code and Simulation (20 points) {#c.-python-code-and-simulation-20-points .unnumbered}
+#### C. Python Code and Simulation (20 points) {#c.-python-code-and-simulation-20-points }
 
 -   **Correctness (10 points)**:
 
@@ -400,7 +402,7 @@ The report will be assessed based on the following components:
 
     -   Code is well-documented with comments explaining logic.
 
-### D. Economic and Environmental Analysis (10 points) {#d.-economic-and-environmental-analysis-10-points .unnumbered}
+#### D. Economic and Environmental Analysis (10 points) {#d.-economic-and-environmental-analysis-10-points }
 
 -   **Economic Feasibility (5 points)**:
 
@@ -410,7 +412,7 @@ The report will be assessed based on the following components:
 
     -   Addresses lifecycle emissions and sustainability factors.
 
-### E. Report Quality (5 points) {#e.-report-quality-5-points .unnumbered}
+#### E. Report Quality (5 points) {#e.-report-quality-5-points }
 
 -   **Organization and Flow (3 points)**:
 
@@ -420,11 +422,11 @@ The report will be assessed based on the following components:
 
     -   Free of major grammatical errors, formatted consistently.
 
-## 2. Final Presentation (30 points) {#final-presentation-30-points .unnumbered}
+### 2. Final Presentation (30 points) {#final-presentation-30-points }
 
 The presentation will be assessed based on the following components:
 
-### A. Delivery and Communication (10 points) {#a.-delivery-and-communication-10-points .unnumbered}
+#### A. Delivery and Communication (10 points) {#a.-delivery-and-communication-10-points }
 
 -   **Clarity and Confidence (5 points)**:
 
@@ -438,7 +440,7 @@ The presentation will be assessed based on the following components:
 
     -   Team responds effectively to questions.
 
-### B. Content Coverage (15 points) {#b.-content-coverage-15-points .unnumbered}
+#### B. Content Coverage (15 points) {#b.-content-coverage-15-points }
 
 -   **Introduction and Objectives (5 points)**:
 
@@ -453,32 +455,32 @@ The presentation will be assessed based on the following components:
 
     -   Summarizes findings and provides actionable insights.
 
-### C. Time Management (5 points) {#c.-time-management-5-points .unnumbered}
+#### C. Time Management (5 points) {#c.-time-management-5-points }
 
 -   Presentation is delivered within the allotted time (e.g., 10
     minutes).
 
-# Grading Summary {#grading-summary .unnumbered}
+### Grading Summary {#grading-summary }
+**Grading Rubric for Silicon-Based Solar Cell Project**
+
+| **Category**                        | **Points** |
+| :---------------------------------- | ---------: |
+| **Project Report**                  | **70**     |
+| Literature Review                   | 15         |
+| Manufacturing Processes             | 15         |
+| Python Code and Simulation          | 20         |
+| Economic and Environmental Analysis | 10         |
+| Report Quality                      | 5          |
+| **Final Presentation**              | **30**     |
+| Delivery and Communication          | 10         |
+| Content Coverage                    | 15         |
+| Time Management                     | 5          |
+| **Total**                           | **100**    |
 
-  **Category**                           **Points**
-  ------------------------------------- ------------
-  **Project Report**                       **70**
-  Literature Review                          15
-  Manufacturing Processes                    15
-  Python Code and Simulation                 20
-  Economic and Environmental Analysis        10
-  Report Quality                             5
-  **Final Presentation**                   **30**
-  Delivery and Communication                 10
-  Content Coverage                           15
-  Time Management                            5
-  **Total**                               **100**
 
-  : Grading Rubric for Silicon-Based Solar Cell Project
+## The Organic Rankine Cycle in Renewable Energy
 
-# The Organic Rankine Cycle in Renewable Energy
-
-## Project Statement
+### Project Statement
 
 The Organic Rankine Cycle (ORC) is a crucial technology in the renewable
 energy sector, offering a pathway to harness low-grade heat sources for
@@ -502,7 +504,7 @@ economic and environmental factors. By the end of this project,
 participants will have a comprehensive understanding of ORC technology
 and its pivotal role in the advancement of renewable energy solutions.
 
-## Thermodynamics and Selection of Organic Fluids
+### Thermodynamics and Selection of Organic Fluids
 
 This section explores the thermodynamic principles of the ORC and the
 criteria for selecting working fluids. Key considerations include:
@@ -517,7 +519,7 @@ criteria for selecting working fluids. Key considerations include:
 
 Diagrams of typical organic fluid T-S and P-H plots will be discussed.
 
-## Applications of Organic Rankine Cycle
+### Applications of Organic Rankine Cycle
 
 The ORC is utilized in various renewable energy applications:
 
@@ -531,7 +533,7 @@ The ORC is utilized in various renewable energy applications:
 
 Real-world examples and case studies will be provided.
 
-## Thermodynamic Equations for Calculating Efficiency and Power Flows
+### Thermodynamic Equations for Calculating Efficiency and Power Flows
 
 The ORC efficiency and power flows are calculated using fundamental
 thermodynamic equations: $$\begin{aligned}
@@ -541,7 +543,7 @@ thermodynamic equations: $$\begin{aligned}
 \end{aligned}$$ The derivation of these equations will be detailed along
 with assumptions and boundary conditions.
 
-## Python Project for Efficiency and Power Flows in an ORC
+### Python Project for Efficiency and Power Flows in an ORC
 
 This section outlines a Python-based project to model and simulate the
 ORC. Students will:
@@ -557,7 +559,7 @@ ORC. Students will:
 
 An example Python script will be included.
 
-## Economics of Typical ORCs
+### Economics of Typical ORCs
 
 The economic feasibility of ORCs is examined, considering:
 
@@ -571,7 +573,7 @@ The economic feasibility of ORCs is examined, considering:
 
 Case studies from commercial ORC installations will be analyzed.
 
-## Environmental Impact of ORC
+### Environmental Impact of ORC
 
 The environmental benefits of ORCs include:
 
@@ -584,14 +586,14 @@ The environmental benefits of ORCs include:
 The potential environmental hazards of organic fluids will also be
 discussed.
 
-## Conclusions
+### Conclusions
 
 This section summarizes the role of the ORC in renewable energy,
 highlighting its advantages, challenges, and future prospects.
 
-# Project Phases {#project-phases-1 .unnumbered}
+### Project Phases {#project-phases-1}
 
-## Phase 1: Literature Review {#phase-1-literature-review-1 .unnumbered}
+### Phase 1: Literature Review {#phase-1-literature-review-1 }
 
 **Topics to cover:**
 
@@ -609,7 +611,7 @@ highlighting its advantages, challenges, and future prospects.
 **Deliverable:** A written summary (2--3 pages) highlighting the
 principles, applications, and benefits of ORC technology.
 
-## Phase 2: Simulation and Thermodynamic Analysis {#phase-2-simulation-and-thermodynamic-analysis .unnumbered}
+### Phase 2: Simulation and Thermodynamic Analysis {#phase-2-simulation-and-thermodynamic-analysis}
 
 **Activities:**
 
@@ -624,7 +626,7 @@ principles, applications, and benefits of ORC technology.
 **Deliverable:** A Python script and accompanying graphs illustrating
 the ORC cycle and efficiency calculations.
 
-## Phase 3: Economic Feasibility Study {#phase-3-economic-feasibility-study .unnumbered}
+### Phase 3: Economic Feasibility Study {#phase-3-economic-feasibility-study}
 
 **Activities:**
 
@@ -637,7 +639,7 @@ the ORC cycle and efficiency calculations.
 **Deliverable:** A report detailing the economic analysis of ORC
 systems.
 
-## Phase 4: Environmental Impact Analysis {#phase-4-environmental-impact-analysis .unnumbered}
+### Phase 4: Environmental Impact Analysis {#phase-4-environmental-impact-analysis}
 
 **Activities:**
 
@@ -649,7 +651,7 @@ systems.
 **Deliverable:** A comparative report on the environmental benefits and
 challenges of ORC technology.
 
-## Phase 5: Report and Presentation {#phase-5-report-and-presentation-1 .unnumbered}
+### Phase 5: Report and Presentation {#phase-5-report-and-presentation}
 
 **Final Report:**
 
@@ -665,7 +667,7 @@ challenges of ORC technology.
 
 **Presentation:** A 10-minute presentation summarizing the project.
 
-# Key Learning Outcomes {#key-learning-outcomes-1 .unnumbered}
+### Key Learning Outcomes {#key-learning-outcomes}
 
 -   Understanding the principles and applications of ORC technology.
 
@@ -678,7 +680,7 @@ challenges of ORC technology.
 -   Development of skills in analyzing and designing renewable energy
     systems.
 
-# Tools and Resources {#tools-and-resources-1 .unnumbered}
+### Tools and Resources {#tools-and-resources}
 
 **Python Libraries:**
 
@@ -696,7 +698,7 @@ challenges of ORC technology.
 -   Websites: National Renewable Energy Laboratory (NREL), International
     Renewable Energy Agency (IRENA).
 
-# Potential Extensions {#potential-extensions-1 .unnumbered}
+### Potential Extensions {#potential-extensions}
 
 -   Simulate hybrid ORC systems combining geothermal and solar heat
     sources.
@@ -707,17 +709,17 @@ challenges of ORC technology.
 -   Assess the feasibility of novel working fluids with low global
     warming potential (GWP).
 
-# Grading Rubric for ORC Project {#grading-rubric-for-orc-project .unnumbered}
+## Grading Rubric for ORC Project {#grading-rubric-for-orc-project }
 
 **Total Points: 100**\
 The grading is divided into **Project Report (70 points)** and **Final
 Presentation (30 points)**.
 
-## 1. Project Report (70 points) {#project-report-70-points-1 .unnumbered}
+### 1. Project Report (70 points) {#project-report-70-points-1 }
 
 The report will be assessed based on the following components:
 
-### A. Literature Review (15 points) {#a.-literature-review-15-points-1 .unnumbered}
+#### A. Literature Review (15 points) {#a.-literature-review-15-points-1 }
 
 -   **Comprehensiveness (10 points)**:
 
@@ -730,7 +732,7 @@ The report will be assessed based on the following components:
 
     -   Written clearly and logically, with well-organized sections.
 
-### B. Thermodynamic Simulation (20 points) {#b.-thermodynamic-simulation-20-points .unnumbered}
+#### B. Thermodynamic Simulation (20 points) {#b.-thermodynamic-simulation-20-points }
 
 -   **Correctness (10 points)**:
 
@@ -746,7 +748,7 @@ The report will be assessed based on the following components:
 
     -   Code is well-documented with comments explaining logic.
 
-### C. Economic Feasibility (15 points) {#c.-economic-feasibility-15-points .unnumbered}
+#### C. Economic Feasibility (15 points) {#c.-economic-feasibility-15-points }
 
 -   **Detail and Accuracy (10 points)**:
 
@@ -760,7 +762,7 @@ The report will be assessed based on the following components:
     -   Results are presented clearly, using tables or graphs where
         appropriate.
 
-### D. Environmental Analysis (10 points) {#d.-environmental-analysis-10-points .unnumbered}
+#### D. Environmental Analysis (10 points) {#d.-environmental-analysis-10-points}
 
 -   **Impact Assessment (5 points)**:
 
@@ -770,7 +772,7 @@ The report will be assessed based on the following components:
 
     -   Discusses the role of ORCs in sustainable energy systems.
 
-### E. Report Quality (10 points) {#e.-report-quality-10-points .unnumbered}
+#### E. Report Quality (10 points) {#e.-report-quality-10-points}
 
 -   **Organization and Flow (5 points)**:
 
@@ -780,11 +782,11 @@ The report will be assessed based on the following components:
 
     -   Free of major grammatical errors, formatted consistently.
 
-## 2. Final Presentation (30 points) {#final-presentation-30-points-1 .unnumbered}
+### 2. Final Presentation (30 points) {#final-presentation-30-points}
 
 The presentation will be assessed based on the following components:
 
-### A. Delivery and Communication (10 points) {#a.-delivery-and-communication-10-points-1 .unnumbered}
+#### A. Delivery and Communication (10 points) {#a.-delivery-and-communication-10-points}
 
 -   **Clarity and Confidence (5 points)**:
 
@@ -798,7 +800,7 @@ The presentation will be assessed based on the following components:
 
     -   Team responds effectively to questions.
 
-### B. Content Coverage (15 points) {#b.-content-coverage-15-points-1 .unnumbered}
+#### B. Content Coverage (15 points) {#b.-content-coverage-15-points}
 
 -   **Introduction and Objectives (5 points)**:
 
@@ -813,7 +815,7 @@ The presentation will be assessed based on the following components:
 
     -   Summarizes findings and provides actionable insights.
 
-### C. Time Management (5 points) {#c.-time-management-5-points-1 .unnumbered}
+#### C. Time Management (5 points) {#c.-time-management-5-points}
 
 -   Presentation is delivered within the allotted time (e.g., 10
     minutes).
@@ -834,7 +836,7 @@ The presentation will be assessed based on the following components:
 
   : Grading Rubric for Organic Rankine Cycle (ORC) Project
 
-# Design and Analysis of a Small-Scale Hydroelectric Power Plant Using Python
+## Design and Analysis of a Small-Scale Hydroelectric Power Plant Using Python
 
 The goal of this project is to provide students with a comprehensive
 understanding of hydroelectric power generation. The project will
@@ -855,9 +857,9 @@ involve:
 -   Preparation of a detailed project report documenting the findings,
     methodology, and conclusions.
 
-## Project Phases
+### Project Phases
 
-## Phase 1: Literature Review {#phase-1-literature-review-2 .unnumbered}
+### Phase 1: Literature Review {#phase-1-literature-review-2 }
 
 **Topics to cover:**
 
@@ -874,7 +876,7 @@ involve:
 importance of hydro power, key design considerations, and its role in
 renewable energy.
 
-## Phase 2: Site Analysis {#phase-2-site-analysis .unnumbered}
+### Phase 2: Site Analysis {#phase-2-site-analysis }
 
 **Activities:**
 
@@ -889,7 +891,7 @@ renewable energy.
 variations, along with the rationale for selecting a particular turbine
 type.
 
-## Phase 3: Design and Simulation {#phase-3-design-and-simulation .unnumbered}
+### Phase 3: Design and Simulation {#phase-3-design-and-simulation }
 
 **Activities:**
 
@@ -914,7 +916,7 @@ type.
 generates useful visualizations (e.g., power vs. flow rate, seasonal
 output, and cost breakdown).
 
-## Phase 4: Comparative Analysis {#phase-4-comparative-analysis .unnumbered}
+### Phase 4: Comparative Analysis {#phase-4-comparative-analysis }
 
 **Activities:**
 
@@ -927,7 +929,7 @@ output, and cost breakdown).
 **Deliverable:** A 1--2 page comparison report with graphs and key
 insights.
 
-## Phase 5: Report and Presentation {#phase-5-report-and-presentation-2 .unnumbered}
+### Phase 5: Report and Presentation {#phase-5-report-and-presentation-2 }
 
 **Final Report:**
 
@@ -943,7 +945,7 @@ insights.
 
 **Presentation:** A 10-minute presentation summarizing the project.
 
-## Key Learning Outcomes
+### Key Learning Outcomes
 
 -   Understanding the fundamentals of hydroelectric power generation.
 
@@ -954,7 +956,7 @@ insights.
 
 -   Development of technical reporting and communication skills.
 
-## Tools and Resources
+### Tools and Resources
 
 **Python Libraries:**
 
@@ -975,7 +977,7 @@ insights.
 
 -   Websites: International Renewable Energy Agency (IRENA), IHA.
 
-## Potential Extensions
+### Potential Extensions
 
 -   Incorporate environmental impact analysis using Python.
 
@@ -983,17 +985,17 @@ insights.
 
 -   Evaluate hybrid systems combining hydro with solar or wind.
 
-# Grading Rubric for Hydropower Project {#grading-rubric-for-hydropower-project .unnumbered}
+### Grading Rubric for Hydropower Project {#grading-rubric-for-hydropower-project }
 
 **Total Points: 100**\
 The grading is divided into **Project Report (70 points)** and **Final
 Presentation (30 points)**.
 
-# 1. Project Report (70 points) {#project-report-70-points-2 .unnumbered}
+#### 1. Project Report (70 points) {#project-report-70-points-2 }
 
 The report will be assessed based on the following components:
 
-## A. Literature Review (15 points) {#a.-literature-review-15-points-2 .unnumbered}
+#### A. Literature Review (15 points) {#a.-literature-review-15-points-2 }
 
 -   **Comprehensiveness (10 points)**:
 
@@ -1006,7 +1008,7 @@ The report will be assessed based on the following components:
 
     -   Written clearly and logically, with well-organized sections.
 
-## B. Site Analysis (15 points) {#b.-site-analysis-15-points .unnumbered}
+#### B. Site Analysis (15 points) {#b.-site-analysis-15-points }
 
 -   **Data Quality (10 points)**:
 
@@ -1020,7 +1022,7 @@ The report will be assessed based on the following components:
 
     -   Data is well-organized using tables, graphs, or charts.
 
-## C. Python Code and Simulation (20 points) {#c.-python-code-and-simulation-20-points-1 .unnumbered}
+#### C. Python Code and Simulation (20 points) {#c.-python-code-and-simulation-20-points-1 }
 
 -   **Correctness (10 points)**:
 
@@ -1038,7 +1040,7 @@ The report will be assessed based on the following components:
 
     -   Code is well-documented with comments explaining logic.
 
-## D. Economic and Environmental Analysis (10 points) {#d.-economic-and-environmental-analysis-10-points-1 .unnumbered}
+#### D. Economic and Environmental Analysis (10 points) {#d.-economic-and-environmental-analysis-10-points-1 }
 
 -   **Economic Viability (5 points)**:
 
@@ -1050,7 +1052,7 @@ The report will be assessed based on the following components:
     -   Addresses potential environmental trade-offs or sustainability
         factors.
 
-## E. Comparative Analysis (5 points) {#e.-comparative-analysis-5-points .unnumbered}
+#### E. Comparative Analysis (5 points) {#e.-comparative-analysis-5-points }
 
 -   **Depth of Comparison (3 points)**:
 
@@ -1061,7 +1063,7 @@ The report will be assessed based on the following components:
 
     -   Provides meaningful conclusions based on the comparison.
 
-## F. Report Quality (5 points) {#f.-report-quality-5-points .unnumbered}
+#### F. Report Quality (5 points) {#f.-report-quality-5-points }
 
 -   **Organization and Flow (3 points)**:
 
@@ -1071,11 +1073,11 @@ The report will be assessed based on the following components:
 
     -   Free of major grammatical errors, formatted consistently.
 
-# 2. Final Presentation (30 points) {#final-presentation-30-points-2 .unnumbered}
+### 2. Final Presentation (30 points) {#final-presentation-30-points-2 }
 
 The presentation will be assessed based on the following components:
 
-## A. Delivery and Communication (10 points) {#a.-delivery-and-communication-10-points-2 .unnumbered}
+#### A. Delivery and Communication (10 points) {#a.-delivery-and-communication-10-points-2 }
 
 -   **Clarity and Confidence (5 points)**:
 
@@ -1089,7 +1091,7 @@ The presentation will be assessed based on the following components:
 
     -   Team responds effectively to questions.
 
-## B. Content Coverage (15 points) {#b.-content-coverage-15-points-2 .unnumbered}
+#### B. Content Coverage (15 points) {#b.-content-coverage-15-points-2 }
 
 -   **Introduction and Objectives (5 points)**:
 
@@ -1104,12 +1106,12 @@ The presentation will be assessed based on the following components:
 
     -   Summarizes findings and provides actionable insights.
 
-## C. Time Management (5 points) {#c.-time-management-5-points-2 .unnumbered}
+#### C. Time Management (5 points) {#c.-time-management-5-points-2 }
 
 -   Presentation is delivered within the allotted time (e.g., 10
     minutes).
 
-# Grading Summary {#grading-summary-1 .unnumbered}
+### Grading Summary {#grading-summary-1 }
 
   **Category**                           **Points**
   ------------------------------------- ------------
@@ -1128,7 +1130,7 @@ The presentation will be assessed based on the following components:
 
   : Grading Rubric for Hydropower Project
 
-# Appendix: Python code for a single solar cell efficiency simulator
+## Appendix: Python code for a single solar cell efficiency simulator
 
 ``` {style="custompython" caption="Python Code for Solar Cell Efficiency Simulator"}
 import numpy as np
@@ -1181,7 +1183,7 @@ plt.grid()
 plt.show()
 ```
 
-# Appendix: Python code for a multi-junction solar cell efficiency simulator
+## Appendix: Python code for a multi-junction solar cell efficiency simulator
 
 ``` {style="custompython" caption="Python Code for Solar Cell Efficiency Simulator"}
 import numpy as np
@@ -1289,7 +1291,7 @@ for i, layer in enumerate(layers):
     plt.show()
 ```
 
-# Python code for thermodynamic properties of R134a
+## Appendix: Python code for thermodynamic properties of R134a
 
 ``` {style="custompython" caption="Python code for thermodynamic properties of R134a"}
 from CoolProp.CoolProp import PropsSI
@@ -1361,7 +1363,7 @@ def r134a_table_examples():
 r134a_table_examples()
 ```
 
-# Appendix: Python code for the Ideal Rankine Cycle
+## Appendix: Python code for the Ideal Rankine Cycle
 
 ``` {style="custompython" caption="Python code for the Ideal Rankine Cycle"}
 from CoolProp.CoolProp import PropsSI
@@ -1500,7 +1502,7 @@ def rankine_cycle_analysis():
 rankine_cycle_analysis()
 ```
 
-# Appendix: Design of a Hydro Power Plant
+## Appendix: Design of a Hydro Power Plant
 
 ``` {style="custompython" caption="Python Code for Design of a Hydro Power Plant"}
 import numpy as np

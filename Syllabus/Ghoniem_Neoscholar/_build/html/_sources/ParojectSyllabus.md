@@ -13,9 +13,12 @@ He is a fellow of the American Nuclear Society, the American Academy of
 Mechanics, the American Society of Mechanical Engineers, the Japan
 Society for Promotion of Science, and The Materials Research Society.
 
-::: wrapfigure
-r.4 ![image](Nasr-Pic){width="40%"}
-:::
+```{figure} Nasr-Pic
+---
+width: 40%
+name: fig:nasr
+align: center here.
+
 
 He was the general chair of the Second International Multiscale
 Materials Modeling Conference in 2004 and the chair of the 19$^{th}$
@@ -70,20 +73,20 @@ using Overleaf and other latex typesetting software for professional
 report writing, and using Google Scholar and ChatGPT as research
 assistants.
 
-# Grading
-
-::: {#tab:grades2}
-  Letter Grade   Percentage
-  -------------- -------------------------
-  A+             $>$`<!-- -->`{=html}95%
-  A              90-95%
-  A-             85-90%
-  B+             80-85%
-  B              75-80%
-  B-             70-75%
-  C              $<70\%$
-
-  : Letter grade percentages
+# Gr```{table} Letter grade percentages
+:name: tab:grades2
+
+| Letter Grade | Percentage |
+|-------------:|:----------|
+| A+           | >95%      |
+| A            | 90–95%    |
+| A–           | 85–90%    |
+| B+           | 80–85%    |
+| B            | 75–80%    |
+| B–           | 70–75%    |
+| C            | <70%      |
+
+es
 :::
 
 # Research Projects
