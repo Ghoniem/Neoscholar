@@ -1,9 +1,9 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: My sample book
-author: The Jupyter Book Community
-logo: logo.png
+title: Renewable Energy 
+author: Professor Nasr Ghoniem
+logo: images/logo.jpeg
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -13,7 +13,7 @@ execute:
 # Define the name of the latex output file for PDF builds
 latex:
   latex_documents:
-    targetname: book.tex
+    targetname: Ghoniem_Neoscholar.tex
 
 # Add a bibtex file so that we can create citations
 bibtex_bibfiles:
@@ -30,3 +30,13 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+
+# Enable numbered titles in the table of contents
+toc:
+  numbered: true
+
+sphinx:
+  config:
+    numfig: true
+    numfig_secnum_depth: 2
+

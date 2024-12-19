@@ -3,7 +3,9 @@
 
 title: Renewable Energy 
 author: Professor Nasr Ghoniem
-logo: logo.png
+logo: images/logo.jpeg
+markdown: myst
+
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -30,3 +32,13 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+
+# Enable numbered titles in the table of contents
+toc:
+  numbered: true
+
+sphinx:
+  config:
+    numfig: true
+    numfig_secnum_depth: 2
+

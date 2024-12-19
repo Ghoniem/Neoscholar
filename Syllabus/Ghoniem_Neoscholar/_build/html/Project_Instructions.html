@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -65,7 +65,6 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Project_Instructions';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Your Instructor" href="8WeekSyllabus.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -117,6 +116,8 @@
       
       
       
+        
+      
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
@@ -147,8 +148,8 @@
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="Renewable Energy - Home"/>
-    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Renewable Energy - Home"/>
+    <img src="_static/logo.jpeg" class="logo__image only-light" alt="Renewable Energy - Home"/>
+    <img src="_static/logo.jpeg" class="logo__image only-dark pst-js-only" alt="Renewable Energy - Home"/>
   
   
 </a></div>
@@ -169,15 +170,10 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="8WeekSyllabus.html">Your Instructor</a></li>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="10WeekSyllabus.html">Your Instructor</a></li>
 
-
-
-
-
-
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Project Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ProjectSyllabus.html">Research Course Syllabus</a></li>
 </ul>
 
     </div>
@@ -480,11 +476,6 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grading-summary-grading-summary-1">Grading Summary {#grading-summary-1 }</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-python-code-for-a-single-solar-cell-efficiency-simulator">Appendix: Python code for a single solar cell efficiency simulator</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-python-code-for-a-multi-junction-solar-cell-efficiency-simulator">Appendix: Python code for a multi-junction solar cell efficiency simulator</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-python-code-for-thermodynamic-properties-of-r134a">Appendix: Python code for thermodynamic properties of R134a</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-python-code-for-the-ideal-rankine-cycle">Appendix: Python code for the Ideal Rankine Cycle</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-design-of-a-hydro-power-plant">Appendix: Design of a Hydro Power Plant</a></li>
 </ul>
             </nav>
         </div>
@@ -1655,503 +1646,11 @@ Delivery and Communication                 10
 Content Coverage                           15
 Time Management                            5
 <strong>Total</strong>                               <strong>100</strong></p>
-<p>: Grading Rubric for Hydropower Project</p>
-</section>
-</section>
-<section id="appendix-python-code-for-a-single-solar-cell-efficiency-simulator">
-<h2>Appendix: Python code for a single solar cell efficiency simulator<a class="headerlink" href="#appendix-python-code-for-a-single-solar-cell-efficiency-simulator" title="Link to this heading">#</a></h2>
-<div class="highlight-{style=&quot;custompython&quot; notranslate"><div class="highlight"><pre><span></span>import numpy as np
-import matplotlib.pyplot as plt
-from scipy.constants import h, c, k
-
-# Constants
-q = 1.602e-19  # Elementary charge (C)
-hc = h * c  # Planck&#39;s constant times the speed of light (J*m)
-T_sun = 5778  # Sun&#39;s temperature (K)
-kT_sun = k * T_sun
-
-# Reasonable Loss Parameters
-reflection_loss = 0.1  # 10% of sunlight is reflected
-recombination_loss = 0.2  # 20% of generated carriers are lost
-resistive_loss = 0.05  # 5% of power is lost due to resistance
-thermalization_efficiency = 0.8  # 80% efficiency for photons above bandgap
-
-# Functions
-def solar_spectrum(E_photon):
-    spectrum = (2 * np.pi * c**2 * E_photon**3) / ((hc)**3 * (np.exp(E_photon / kT_sun) - 1))
-    return spectrum
-
-def calculate_efficiency(E_g, E_photon, spectrum):
-    absorbed = E_photon &gt;= E_g
-    absorbed_spectrum = spectrum[absorbed]
-    absorbed_energy = E_photon[absorbed]
-    effective_energy = np.minimum(absorbed_energy, E_g) * thermalization_efficiency
-    power_generated = np.trapz(effective_energy * absorbed_spectrum, x=E_photon[absorbed])
-    power_generated *= (1 - reflection_loss) * (1 - recombination_loss) * (1 - resistive_loss)
-    total_power = np.trapz(E_photon * spectrum, x=E_photon)
-    efficiency = power_generated / total_power
-    return efficiency
-
-E_photon = np.linspace(0.1, 4, 1000) * q
-spectrum = solar_spectrum(E_photon)
-E_g = 1.1 * q
-efficiency = calculate_efficiency(E_g, E_photon, spectrum)
-print(f&quot;Practical Efficiency with Losses: {efficiency * 100:.2f}%&quot;)
-
-plt.figure(figsize=(10, 6))
-plt.plot(E_photon / q, spectrum, label=&quot;Solar Spectrum (AM1.5)&quot;)
-plt.axvline(E_g / q, color=&quot;r&quot;, linestyle=&quot;--&quot;, label=f&quot;Bandgap Energy (E_g = {E_g / q:.2f} eV)&quot;)
-plt.fill_between(E_photon / q, spectrum, where=(E_photon &gt;= E_g), alpha=0.3, label=&quot;Absorbed Spectrum&quot;)
-plt.title(&quot;Solar Spectrum and Absorption with Losses&quot;)
-plt.xlabel(&quot;Photon Energy (eV)&quot;)
-plt.ylabel(&quot;Spectral Intensity&quot;)
-plt.legend()
-plt.grid()
-plt.show()
+<p>: Grading Rubric for Hydrocy_curve()</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </section>
-<section id="appendix-python-code-for-a-multi-junction-solar-cell-efficiency-simulator">
-<h2>Appendix: Python code for a multi-junction solar cell efficiency simulator<a class="headerlink" href="#appendix-python-code-for-a-multi-junction-solar-cell-efficiency-simulator" title="Link to this heading">#</a></h2>
-<div class="highlight-{style=&quot;custompython&quot; notranslate"><div class="highlight"><pre><span></span>import numpy as np
-import matplotlib.pyplot as plt
-from scipy.constants import h, c, k
-
-# Constants
-q = 1.602e-19  # Elementary charge (C)
-hc = h * c  # Planck&#39;s constant times the speed of light (J*m)
-
-# Solar spectrum (AM1.5)
-def solar_spectrum(E_photon):
-    T_sun = 5778  # Sun&#39;s temperature (K)
-    kT_sun = k * T_sun
-    spectrum = (2 * np.pi * c**2 * E_photon**3) / ((hc)**3 * (np.exp(E_photon / kT_sun) - 1))
-    return spectrum
-
-# Absorption calculation
-def absorption(alpha, d, E_photon):
-    return 1 - np.exp(-alpha * d)
-
-# Layer-by-layer absorption and power contribution
-def layer_efficiency(E_g, alpha, d, E_photon, transmitted_spectrum):
-    absorbed = absorption(alpha, d, E_photon)
-    usable_photons = (E_photon &gt;= E_g)
-    effective_energy = np.minimum(E_photon, E_g) * absorbed * usable_photons
-    layer_power = np.trapz(effective_energy * transmitted_spectrum, x=E_photon)
-    
-    # Reduce transmitted spectrum for subsequent layers
-    remaining_spectrum = transmitted_spectrum * (1 - absorbed)
-    return layer_power, remaining_spectrum
-
-# Total efficiency function
-def total_efficiency(layers, E_photon, spectrum):
-    transmitted_spectrum = spectrum  # Start with full spectrum
-    total_power = 0
-    incident_power = np.trapz(E_photon * spectrum, x=E_photon)  # Total incident power
-    for layer in layers:
-        E_g, alpha, d = layer
-        layer_power, transmitted_spectrum = layer_efficiency(E_g, alpha, d, E_photon, transmitted_spectrum)
-        total_power += layer_power
-    return total_power / incident_power
-
-# Efficiency with loss mechanisms
-def practical_efficiency(layers, E_photon, spectrum, losses):
-    transmitted_spectrum = spectrum  # Start with full spectrum
-    total_power = 0
-    incident_power = np.trapz(E_photon * spectrum, x=E_photon)  # Total incident power
-    for layer in layers:
-        E_g, alpha, d = layer
-        layer_power, transmitted_spectrum = layer_efficiency(E_g, alpha, d, E_photon, transmitted_spectrum)
-        
-        # Apply loss mechanisms
-        layer_power *= (1 - losses[&#39;reflection&#39;]) * (1 - losses[&#39;thermalization&#39;]) * (1 - losses[&#39;recombination&#39;])
-        total_power += layer_power
-    return total_power / incident_power
-
-# Material and layer properties
-layers = [
-    # Example: [Bandgap (J), Absorption coefficient (1/m), Thickness (m)]
-    [1.85 * q, 1e7, 1e-6],  # Layer 1: GaInP2
-    [1.424 * q, 1e7, 2e-6],  # Layer 2: GaAs
-    [0.66 * q, 1e6, 3e-6],  # Layer 3: Ge
-]
-
-# Photon energy range (in Joules)
-E_photon = np.linspace(0.1, 4, 1000) * q
-spectrum = solar_spectrum(E_photon)
-
-# Ideal efficiency
-ideal_efficiency = total_efficiency(layers, E_photon, spectrum)
-print(f&quot;Ideal Efficiency: {ideal_efficiency * 100:.2f}%&quot;)
-
-# Loss mechanisms
-losses = {
-    &#39;reflection&#39;: 0.1,  # 10% reflection loss
-    &#39;thermalization&#39;: 0.2,  # 20% thermalization loss
-    &#39;recombination&#39;: 0.15,  # 15% recombination loss
-}
-
-# Practical efficiency
-practical_efficiency_value = practical_efficiency(layers, E_photon, spectrum, losses)
-print(f&quot;Practical Efficiency: {practical_efficiency_value * 100:.2f}%&quot;)
-
-# Plot individual graphs for each layer
-for i, layer in enumerate(layers):
-    E_g, alpha, d = layer
-    absorption_curve = absorption(alpha, d, E_photon)
-    absorbed_spectrum = absorption_curve * spectrum
-    
-    # Shade only the portion above the bandgap
-    mask = E_photon &gt;= E_g
-    absorbed_spectrum_above_bandgap = absorbed_spectrum * mask
-
-    plt.figure(figsize=(10, 6))
-    plt.plot(E_photon / q, spectrum, label=&quot;Solar Spectrum (AM1.5)&quot;, color=&quot;black&quot;)
-    plt.fill_between(E_photon / q, absorbed_spectrum_above_bandgap, color=f&quot;C{i}&quot;, alpha=0.3, label=f&quot;Layer {i+1} Absorbed&quot;)
-    plt.axvline(E_g / q, color=f&quot;C{i}&quot;, linestyle=&quot;--&quot;, label=f&quot;Layer {i+1} Bandgap {E_g / q:.2f} eV&quot;)
-
-    plt.title(f&quot;Absorption for Layer {i+1}&quot;)
-    plt.xlabel(&quot;Photon Energy (eV)&quot;)
-    plt.ylabel(&quot;Spectral Intensity (arbitrary units)&quot;)
-    plt.legend()
-    plt.grid()
-    plt.show()
-</pre></div>
-</div>
-</section>
-<section id="appendix-python-code-for-thermodynamic-properties-of-r134a">
-<h2>Appendix: Python code for thermodynamic properties of R134a<a class="headerlink" href="#appendix-python-code-for-thermodynamic-properties-of-r134a" title="Link to this heading">#</a></h2>
-<div class="highlight-{style=&quot;custompython&quot; notranslate"><div class="highlight"><pre><span></span>from CoolProp.CoolProp import PropsSI
-
-def r134a_table_examples():
-    &quot;&quot;&quot;
-    Examples for calculating R134a properties using CoolProp, covering:
-    1. General R134a properties.
-    2. Superheated state: Given temperature and pressure, find all properties.
-    3. Saturation region: Given entropy and pressure, find the refrigerant quality (x).
-    4. Saturation region: Given entropy and pressure, find properties.
-    5. Liquid state: Given pressure and x=0, find all properties.
-    6. Liquid state: Given pressure and entropy, find all properties.
-    &quot;&quot;&quot;
-
-    # (1) General R134a Properties: Given P &amp; T
-    print(&quot;(1) General R134a Properties&quot;)
-    pressure = 500000  # Pa (5 bar)
-    temperature = 300  # K (27°C)
-    print(f&quot;Pressure: {pressure / 1000:.2f} kPa, Temperature: {temperature - 273.15:.2f} °C&quot;)
-    print(f&quot;Specific Enthalpy: {PropsSI(&#39;H&#39;, &#39;P&#39;, pressure, &#39;T&#39;, temperature, &#39;R134a&#39;) / 1000:.2f} kJ/kg&quot;)
-    print(f&quot;Specific Entropy: {PropsSI(&#39;S&#39;, &#39;P&#39;, pressure, &#39;T&#39;, temperature, &#39;R134a&#39;):.4f} J/kg.K\n&quot;)
-
-    # (2) Superheated State: Given T &amp; P, find all properties
-    print(&quot;(2) Superheated State&quot;)
-    pressure = 600000  # Pa (6 bar)
-    temperature = 40 + 273.15  # K (40°C)
-    print(f&quot;Pressure: {pressure / 1000:.2f} kPa, Temperature: {temperature - 273.15:.2f} °C&quot;)
-    print(f&quot;Specific Enthalpy: {PropsSI(&#39;H&#39;, &#39;P&#39;, pressure, &#39;T&#39;, temperature, &#39;R134a&#39;) / 1000:.2f} kJ/kg&quot;)
-    print(f&quot;Specific Entropy: {PropsSI(&#39;S&#39;, &#39;P&#39;, pressure, &#39;T&#39;, temperature, &#39;R134a&#39;):.4f} J/kg.K\n&quot;)
-
-    # (3) Saturation Region: Given S &amp; P, find quality (x)
-    print(&quot;(3) Saturation Region: Find Quality (x)&quot;)
-    pressure = 200000  # Pa (2 bar)
-    entropy_liquid = PropsSI(&#39;S&#39;, &#39;P&#39;, pressure, &#39;Q&#39;, 0, &#39;R134a&#39;)  # Saturated liquid entropy
-    entropy_vapor = PropsSI(&#39;S&#39;, &#39;P&#39;, pressure, &#39;Q&#39;, 1, &#39;R134a&#39;)  # Saturated vapor entropy
-    entropy = entropy_liquid + 0.5 * (entropy_vapor - entropy_liquid)  # Ensure quality &lt; 1 (e.g., 0.5)
-    quality = (entropy - entropy_liquid) / (entropy_vapor - entropy_liquid)  # Quality calculation
-    print(f&quot;Pressure: {pressure / 1000:.2f} kPa, Entropy: {entropy / 1000:.2f} kJ/kg.K&quot;)
-    print(f&quot;Quality (x): {quality:.4f}\n&quot;)
-
-    # (4) Saturation Region: Given S &amp; P, find properties
-    print(&quot;(4) Saturation Region: Find Properties&quot;)
-    enthalpy_liquid = PropsSI(&#39;H&#39;, &#39;P&#39;, pressure, &#39;Q&#39;, 0, &#39;R134a&#39;)  # Saturated liquid enthalpy
-    enthalpy_vapor = PropsSI(&#39;H&#39;, &#39;P&#39;, pressure, &#39;Q&#39;, 1, &#39;R134a&#39;)  # Saturated vapor enthalpy
-    enthalpy = enthalpy_liquid + quality * (enthalpy_vapor - enthalpy_liquid)  # Enthalpy for quality
-    print(f&quot;Pressure: {pressure / 1000:.2f} kPa&quot;)
-    print(f&quot;Entropy: {entropy / 1000:.2f} kJ/kg.K, Quality (x): {quality:.2f}&quot;)
-    print(f&quot;Enthalpy: {enthalpy / 1000:.2f} kJ/kg\n&quot;)
-
-    # (5) Liquid State: Given P &amp; x=0, find all properties
-    print(&quot;(5) Liquid State: Find All Properties&quot;)
-    pressure = 400000  # Pa (4 bar)
-    print(f&quot;Pressure: {pressure / 1000:.2f} kPa&quot;)
-    print(f&quot;Saturated Liquid Enthalpy: {PropsSI(&#39;H&#39;, &#39;P&#39;, pressure, &#39;Q&#39;, 0, &#39;R134a&#39;) / 1000:.2f} kJ/kg&quot;)
-    print(f&quot;Saturated Liquid Density: {PropsSI(&#39;D&#39;, &#39;P&#39;, pressure, &#39;Q&#39;, 0, &#39;R134a&#39;):.2f} kg/m^3\n&quot;)
-
-    # (6) Liquid State: Given P &amp; S, find all properties
-    print(&quot;(6) Liquid State: Find Properties&quot;)
-    pressure = 300000  # Pa (3 bar)
-    entropy = 1.0  # kJ/kg.K
-    temperature = PropsSI(&#39;T&#39;, &#39;P&#39;, pressure, &#39;S&#39;, entropy * 1000, &#39;R134a&#39;)  # Temperature from S &amp; P
-    print(f&quot;Pressure: {pressure / 1000:.2f} kPa, Entropy: {entropy:.2f} kJ/kg.K&quot;)
-    print(f&quot;Temperature: {temperature - 273.15:.2f} °C&quot;)
-    print(f&quot;Enthalpy: {PropsSI(&#39;H&#39;, &#39;P&#39;, pressure, &#39;S&#39;, entropy * 1000, &#39;R134a&#39;) / 1000:.2f} kJ/kg&quot;)
-    print(f&quot;Density: {PropsSI(&#39;D&#39;, &#39;P&#39;, pressure, &#39;S&#39;, entropy * 1000, &#39;R134a&#39;):.2f} kg/m^3\n&quot;)
-
-# Call the function to run all examples
-r134a_table_examples()
-</pre></div>
-</div>
-</section>
-<section id="appendix-python-code-for-the-ideal-rankine-cycle">
-<h2>Appendix: Python code for the Ideal Rankine Cycle<a class="headerlink" href="#appendix-python-code-for-the-ideal-rankine-cycle" title="Link to this heading">#</a></h2>
-<div class="highlight-{style=&quot;custompython&quot; notranslate"><div class="highlight"><pre><span></span>from CoolProp.CoolProp import PropsSI
-import matplotlib.pyplot as plt
-import numpy as np
-
-def rankine_cycle_analysis():
-    &quot;&quot;&quot;
-    Perform calculations for the ideal Rankine cycle, including:
-    1. Specific work of turbine and pump.
-    2. Heat added (qin) and rejected (qout).
-    3. Net work (wnet) and thermal efficiency (eta).
-    Generate T-S and H-S diagrams with saturation dome and cycle curves.
-    &quot;&quot;&quot;
-
-    # Define state points (pressures in Pa, temperatures in K)
-    P1 = 100000  # Condenser pressure (Pa)
-    P2 = 5000000  # Boiler pressure (Pa)
-    T3 = 773.15  # Turbine inlet temperature (K)
-    Pcrit = 22e6
-    dome_p2 = Pcrit
-    dome_p1 = 1e4
-    # State 1: Saturated liquid at P1
-    h1 = PropsSI(&#39;H&#39;, &#39;P&#39;, P1, &#39;Q&#39;, 0, &#39;Water&#39;)  # Enthalpy (J/kg)
-    s1 = PropsSI(&#39;S&#39;, &#39;P&#39;, P1, &#39;Q&#39;, 0, &#39;Water&#39;)  # Entropy (J/kg.K)
-
-    # State 2: Compressed liquid (isentropic process)
-    s2 = s1  # Isentropic process
-    h2 = PropsSI(&#39;H&#39;, &#39;P&#39;, P2, &#39;S&#39;, s2, &#39;Water&#39;)
-    T2 = PropsSI(&#39;T&#39;, &#39;P&#39;, P2, &#39;S&#39;, s2, &#39;Water&#39;)
-
-    # State 2_prime: Saturated liquid at P2
-    h2_prime = PropsSI(&#39;H&#39;, &#39;P&#39;, P2, &#39;Q&#39;, 0, &#39;Water&#39;)
-    s2_prime = PropsSI(&#39;S&#39;, &#39;P&#39;, P2, &#39;Q&#39;, 0, &#39;Water&#39;)
-
-    # State 3: Superheated vapor
-    h3 = PropsSI(&#39;H&#39;, &#39;P&#39;, P2, &#39;Q&#39;, 1,  &#39;Water&#39;)  # Enthalpy (J/kg)
-    s3 = PropsSI(&#39;S&#39;, &#39;P&#39;, P2, &#39;Q&#39;, 1, &#39;Water&#39;)
-
-    # State 4: Saturated mixture (isentropic expansion)
-    s4 = s3  # Isentropic process
-    h4 = PropsSI(&#39;H&#39;, &#39;P&#39;, P1, &#39;S&#39;, s4, &#39;Water&#39;)
-
-    # Work and heat calculations
-    wturb = h3 - h4  # Work done by the turbine (J/kg)
-    wpump = h2 - h1  # Work done by the pump (J/kg)
-    qin = h3 - h2  # Heat added in the boiler (J/kg)
-    qout = h1 - h4  # Heat rejected in the condenser (J/kg)
-
-    # Net work and thermal efficiency
-    wnet = wturb - wpump  # Net work (J/kg)
-    eta = wnet / qin  # Thermal efficiency
-
-    # Display results
-    print(&quot;Rankine Cycle Analysis&quot;)
-    print(f&quot;State 1: h1 = {h1 / 1000:.2f} kJ/kg, s1 = {s1 / 1000:.4f} kJ/kg.K&quot;)
-    print(f&quot;State 2: h2 = {h2 / 1000:.2f} kJ/kg, s2 = {s2 / 1000:.4f} kJ/kg.K, T2 = {T2 - 273.15:.2f} °C&quot;)
-    print(f&quot;State 2_prime: h2_prime = {h2_prime / 1000:.2f} kJ/kg, s2_prime = {s2_prime / 1000:.4f} kJ/kg.K&quot;)
-    print(f&quot;State 3: h3 = {h3 / 1000:.2f} kJ/kg, s3 = {s3 / 1000:.4f} kJ/kg.K&quot;)
-    print(f&quot;State 4: h4 = {h4 / 1000:.2f} kJ/kg, s4 = {s4 / 1000:.4f} kJ/kg.K&quot;)
-    print(f&quot;Turbine Work (wturb): {wturb / 1000:.2f} kJ/kg&quot;)
-    print(f&quot;Pump Work (wpump): {wpump / 1000:.2f} kJ/kg&quot;)
-    print(f&quot;Heat Added (qin): {qin / 1000:.2f} kJ/kg&quot;)
-    print(f&quot;Heat Rejected (qout): {qout / 1000:.2f} kJ/kg&quot;)
-    print(f&quot;Net Work (wnet): {wnet / 1000:.2f} kJ/kg&quot;)
-    print(f&quot;Thermal Efficiency (eta): {eta * 100:.2f}%&quot;)
-
-    # Generate T-S Diagram
-    s_sat_liquid = []
-    t_sat_liquid = []
-    s_sat_vapor = []
-    t_sat_vapor = []
-
-    for p in np.logspace(np.log10(dome_p1), np.log10(dome_p2), 200):
-        s_sat_liquid.append(PropsSI(&#39;S&#39;, &#39;P&#39;, p, &#39;Q&#39;, 0, &#39;Water&#39;))
-        t_sat_liquid.append(PropsSI(&#39;T&#39;, &#39;P&#39;, p, &#39;Q&#39;, 0, &#39;Water&#39;))
-        s_sat_vapor.append(PropsSI(&#39;S&#39;, &#39;P&#39;, p, &#39;Q&#39;, 1, &#39;Water&#39;))
-        t_sat_vapor.append(PropsSI(&#39;T&#39;, &#39;P&#39;, p, &#39;Q&#39;, 1, &#39;Water&#39;))
-
-    plt.figure()
-    # Saturation dome
-    plt.plot([s / 1000 for s in s_sat_liquid], [t - 273.15 for t in t_sat_liquid], label=&quot;Saturation Liquid&quot;, linestyle=&quot;-&quot;, linewidth=1)
-    plt.plot([s / 1000 for s in s_sat_vapor], [t - 273.15 for t in t_sat_vapor], label=&quot;Saturation Vapor&quot;, linestyle=&quot;-&quot;, linewidth=1)
-
-    # Cycle curve
-    cycle_s = [s1, s2, s2_prime, s3, s4, s1]
-    cycle_t = [PropsSI(&#39;T&#39;, &#39;P&#39;, P1, &#39;Q&#39;, 0, &#39;Water&#39;) - 273.15, T2 - 273.15, PropsSI(&#39;T&#39;, &#39;P&#39;, P2, &#39;Q&#39;, 0, &#39;Water&#39;) - 273.15,
-               PropsSI(&#39;T&#39;, &#39;P&#39;, P2, &#39;Q&#39;, 1, &#39;Water&#39;) - 273.15, PropsSI(&#39;T&#39;, &#39;P&#39;, P1, &#39;Q&#39;, 0, &#39;Water&#39;) - 273.15, PropsSI(&#39;T&#39;, &#39;P&#39;, P1, &#39;Q&#39;, 0, &#39;Water&#39;) - 273.15]
-    plt.plot([s / 1000 for s in cycle_s], cycle_t, label=&quot;Cycle&quot;, linewidth=2, color=&quot;red&quot;)
-
-    # Label states
-    for i, (s, t) in enumerate(zip(cycle_s, cycle_t), start=1):
-        plt.text(s / 1000, t, f&quot;State {i}&quot;, fontsize=8)
-
-    plt.xlabel(&quot;Entropy (kJ/kg.K)&quot;)
-    plt.ylabel(&quot;Temperature (°C)&quot;)
-    plt.title(&quot;Rankine Cycle T-S Diagram&quot;)
-    ylim = 500
-    plt.legend()
-    plt.grid()
-    plt.show()
-
-    # Generate H-S Diagram (Mollier Diagram)
-    h_sat_liquid = []
-    s_sat_liquid = []
-    h_sat_vapor = []
-    s_sat_vapor = []
-
-    for p in np.logspace(np.log10(dome_p1), np.log10(dome_p2), 500):
-        h_sat_liquid.append(PropsSI(&#39;H&#39;, &#39;P&#39;, p, &#39;Q&#39;, 0, &#39;Water&#39;))
-        s_sat_liquid.append(PropsSI(&#39;S&#39;, &#39;P&#39;, p, &#39;Q&#39;, 0, &#39;Water&#39;))
-        h_sat_vapor.append(PropsSI(&#39;H&#39;, &#39;P&#39;, p, &#39;Q&#39;, 1, &#39;Water&#39;))
-        s_sat_vapor.append(PropsSI(&#39;S&#39;, &#39;P&#39;, p, &#39;Q&#39;, 1, &#39;Water&#39;))
-
-    plt.figure()
-    # Saturation dome
-    plt.plot([s / 1000 for s in s_sat_liquid], [h / 1000 for h in h_sat_liquid], label=&quot;Saturation Liquid&quot;, linestyle=&quot;-&quot;, linewidth=1)
-    plt.plot([s / 1000 for s in s_sat_vapor], [h / 1000 for h in h_sat_vapor], label=&quot;Saturation Vapor&quot;, linestyle=&quot;-&quot;, linewidth=1)
-
-    # Cycle curve
-    cycle_h = [h1, h2, h2_prime, h3, h4, h1]
-    cycle_s = [s1, s2, s2_prime, s3, s4, s1]
-    plt.plot([s / 1000 for s in cycle_s], [h / 1000 for h in cycle_h], label=&quot;Cycle&quot;, linewidth=2, color=&quot;red&quot;)
-
-    # Label states
-    for i, (s, h) in enumerate(zip(cycle_s, cycle_h), start=1):
-        plt.text(s / 1000, h / 1000, f&quot;State {i}&quot;, fontsize=8)
-
-    plt.xlabel(&quot;Entropy (kJ/kg.K)&quot;)
-    plt.ylabel(&quot;Enthalpy (kJ/kg)&quot;)
-    plt.title(&quot;Rankine Cycle H-S Diagram (Mollier Diagram)&quot;)
-    plt.legend()
-    plt.grid()
-    plt.show()
-
-rankine_cycle_analysis()
-</pre></div>
-</div>
-</section>
-<section id="appendix-design-of-a-hydro-power-plant">
-<h2>Appendix: Design of a Hydro Power Plant<a class="headerlink" href="#appendix-design-of-a-hydro-power-plant" title="Link to this heading">#</a></h2>
-<div class="highlight-{style=&quot;custompython&quot; notranslate"><div class="highlight"><pre><span></span>import numpy as np
-import matplotlib.pyplot as plt
-
-# Constants
-g = 9.81  # Gravitational acceleration (m/s^2)
-rho = 1000  # Water density (kg/m^3)
-
-# User Inputs
-head = 50  # Net head in meters
-flow_rate = 20  # Flow rate in cubic meters per second (m^3/s)
-efficiency = 0.9  # Efficiency of the turbine (fraction, e.g., 90%)
-
-# Function to calculate power
-def calculate_power(flow_rate, head, efficiency):
-    &quot;&quot;&quot;
-    Calculate the power output of a hydroelectric power plant.
-    :param flow_rate: Flow rate (m^3/s)
-    :param head: Head (m)
-    :param efficiency: Turbine efficiency (fraction)
-    :return: Power (kW)
-    &quot;&quot;&quot;
-    power = efficiency * rho * g * flow_rate * head
-    return power / 1000  # Convert to kW
-
-# Turbine Selection
-turbine_types = {
-    &quot;Pelton&quot;: {&quot;head_range&quot;: (50, 1000), &quot;flow_range&quot;: (1, 10)},
-    &quot;Francis&quot;: {&quot;head_range&quot;: (10, 300), &quot;flow_range&quot;: (5, 50)},
-    &quot;Kaplan&quot;: {&quot;head_range&quot;: (2, 20), &quot;flow_range&quot;: (10, 100)},
-}
-
-def select_turbine(head, flow_rate):
-    &quot;&quot;&quot;
-    Select a suitable turbine based on head and flow rate.
-    &quot;&quot;&quot;
-    for turbine, specs in turbine_types.items():
-        if specs[&quot;head_range&quot;][0] &lt;= head &lt;= specs[&quot;head_range&quot;][1] and specs[&quot;flow_range&quot;][0] &lt;= flow_rate &lt;= specs[&quot;flow_range&quot;][1]:
-            return turbine
-    return &quot;No suitable turbine found&quot;
-
-# Economic Analysis
-def economic_analysis(power_output, cost_per_kw=1500, electricity_price=0.1):
-    &quot;&quot;&quot;
-    Calculate capital cost, annual revenue, and payback period.
-    :param power_output: Power output (kW)
-    :param cost_per_kw: Capital cost per kW ($)
-    :param electricity_price: Price per kWh ($/kWh)
-    :return: Capital cost, annual revenue, payback period (years)
-    &quot;&quot;&quot;
-    capital_cost = power_output * cost_per_kw
-    annual_revenue = power_output * 8760 * electricity_price  # 8760 hours/year
-    payback_period = capital_cost / annual_revenue
-    return capital_cost, annual_revenue, payback_period
-
-# Seasonal Variability
-def seasonal_variability(head, flow_rate, months):
-    &quot;&quot;&quot;
-    Simulate power output over months with variable flow rates.
-    :param head: Head (m)
-    :param flow_rate: Average flow rate (m^3/s)
-    :param months: List of monthly flow rate factors (e.g., [0.8, 1.2, ...])
-    :return: List of monthly power outputs (kW)
-    &quot;&quot;&quot;
-    monthly_powers = []
-    for factor in months:
-        monthly_flow = flow_rate * factor
-        monthly_power = calculate_power(monthly_flow, head, efficiency)
-        monthly_powers.append(monthly_power)
-    return monthly_powers
-
-# Main Execution
-power_output = calculate_power(flow_rate, head, efficiency)
-selected_turbine = select_turbine(head, flow_rate)
-
-# Economic Analysis
-capital_cost, annual_revenue, payback_period = economic_analysis(power_output)
-
-# Seasonal Variability Simulation
-monthly_factors = [0.7, 0.8, 1.0, 1.2, 1.1, 0.9, 0.8, 0.7, 0.9, 1.0, 1.1, 1.2]
-monthly_powers = seasonal_variability(head, flow_rate, monthly_factors)
-
-# Display Results
-print(f&quot;Power Output: {power_output:.2f} kW&quot;)
-print(f&quot;Selected Turbine: {selected_turbine}&quot;)
-print(f&quot;Capital Cost: ${capital_cost:,.2f}&quot;)
-print(f&quot;Annual Revenue: ${annual_revenue:,.2f}&quot;)
-print(f&quot;Payback Period: {payback_period:.2f} years&quot;)
-
-# Plot Seasonal Power Output
-plt.figure()
-months = np.arange(1, 13)
-plt.bar(months, monthly_powers, color=&quot;skyblue&quot;, label=&quot;Monthly Power Output&quot;)
-plt.xlabel(&quot;Month&quot;)
-plt.ylabel(&quot;Power Output (kW)&quot;)
-plt.title(&quot;Seasonal Variability in Power Output&quot;)
-plt.xticks(months)
-plt.grid(axis=&quot;y&quot;)
-plt.legend()
-plt.show()
-
-# Plot Efficiency Curve
-def plot_efficiency_curve():
-    flow_rates = np.linspace(5, 50, 100)  # Vary flow rate between 5 and 50 m^3/s
-    power_outputs = [calculate_power(flow, head, efficiency) for flow in flow_rates]
-    efficiency_curve = np.linspace(0.7, 0.95, len(flow_rates))  # Example efficiency curve
-    adjusted_power = [calculate_power(flow, head, eff) for flow, eff in zip(flow_rates, efficiency_curve)]
-
-    plt.figure()
-    plt.plot(flow_rates, power_outputs, label=&quot;Ideal Power Output&quot;, linestyle=&quot;--&quot;)
-    plt.plot(flow_rates, adjusted_power, label=&quot;Adjusted Power Output&quot;)
-    plt.xlabel(&quot;Flow Rate (m^3/s)&quot;)
-    plt.ylabel(&quot;Power Output (kW)&quot;)
-    plt.title(&quot;Efficiency Impact on Power Output&quot;)
-    plt.legend()
-    plt.grid()
-    plt.show()
-
-plot_efficiency_curve()
-</pre></div>
-</div>
 </section>
 </section>
 
@@ -2185,15 +1684,6 @@ plot_efficiency_curve()
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="8WeekSyllabus.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Your Instructor</p>
-      </div>
-    </a>
 </div>
                 </footer>
               
@@ -2326,11 +1816,6 @@ plot_efficiency_curve()
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grading-summary-grading-summary-1">Grading Summary {#grading-summary-1 }</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-python-code-for-a-single-solar-cell-efficiency-simulator">Appendix: Python code for a single solar cell efficiency simulator</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-python-code-for-a-multi-junction-solar-cell-efficiency-simulator">Appendix: Python code for a multi-junction solar cell efficiency simulator</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-python-code-for-thermodynamic-properties-of-r134a">Appendix: Python code for thermodynamic properties of R134a</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-python-code-for-the-ideal-rankine-cycle">Appendix: Python code for the Ideal Rankine Cycle</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-design-of-a-hydro-power-plant">Appendix: Design of a Hydro Power Plant</a></li>
 </ul>
   </nav></div>
 

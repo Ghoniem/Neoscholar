@@ -4,6 +4,12 @@
 format: jb-book
 root: intro
 chapters:
-- file: 8WeekSyllabus
+- file: 10WeekSyllabus
 - file: ProjectSyllabus
-- file: Project_Instructions
+# - file: Project_Instructions
+# - file: IdealRankine
+# - file: HydroPower
+# - file: Ethanol
+# - file: Ammonia
+# - file: PV_cell_efficiency
+# - file: R134a

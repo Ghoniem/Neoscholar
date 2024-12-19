@@ -7,7 +7,7 @@ in 1982, Full Professor in 1986, Senior Professor in 1996, and
 "Distinguished Professor" in 2006. Currently, he is a \"Distinguished
 Research Professor\" with dual appointments in the departments of
 Mechanical and Aerospace Engineering, and Materials Science &
-Engineering at UCLA. He has wide experience in the development of
+Engineering at UCLA. He has wide experience developing
 materials in extreme environments (Nuclear, Mechanical and Aerospace).
 He is a fellow of the American Nuclear Society, the American Academy of
 Mechanics, the American Society of Mechanical Engineers, the Japan
@@ -110,31 +110,33 @@ learning experience and understanding. These include:
 -   Citation and Reference Style: These will follow the guidelines
     established in a report template to be provided to students.
 
-# Grading
+# Grad:::{table} Grading Scheme
+:name: tab:grades1
 
-::: {#tab:grades1}
-  Grade Category     Percent of the Grade
-  ------------------ ----------------------
-  Homework           15%
-  Discussions        15%
-  Quizzes            10%
-  Research Project   60%
+| Grade Category     | Percent of the Grade |
+|--------------------|----------------------|
+| Homework           | 15%                 |
+| Discussions        | 15%                 |
+| Quizzes            | 10%                 |
+| Research Project   | 60%                 |
 
-  : Grading Scheme
 :::
 
-::: {#tab:grades2}
-  Letter Grade   Percentage
-  -------------- -------------------------
-  A+             $>$`<!-- -->`{=html}95%
-  A              90-95%
-  A-             85-90%
-  B+             80-85%
-  B              75-80%
-  B-             70-75%
-  C              $<70\%$
+:::{table} Letter Grade Percentages
+:name: tab:grades2
 
-  : Letter grade percentages
+| Letter Grade   | Percentage       |
+|----------------|------------------|
+| A+             | >95%            |
+| A              | 90-95%          |
+| A-             | 85-90%          |
+| B+             | 80-85%          |
+| B              | 75-80%          |
+| B-             | 70-75%          |
+| C              | <70%            |
+
+:::
+s
 :::
 
 # Course Schedule
