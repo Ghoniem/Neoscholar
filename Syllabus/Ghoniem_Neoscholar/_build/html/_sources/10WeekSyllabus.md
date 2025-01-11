@@ -12,12 +12,14 @@ materials in extreme environments (Nuclear, Mechanical, and Aerospace).
 He is a fellow of the American Nuclear Society, the American Academy of
 Mechanics, the American Society of Mechanical Engineers, Japan
 Society for Promotion of Science, and the Materials Research Society.
-
-```{figure} images/Nasr-Pic.png
----
-width: 40%
-align: center
----
+```md
+   ```
+   {figure} images/Nasr-Pic.png
+   ---
+   width: 40%
+   align: center
+   ---
+ 
 Professor Ghoniem
 ```
 

@@ -8,7 +8,7 @@ project at a location of their choice using the technologies and tools
 presented in this class. More details will be provided during the
 course. The TA will direct the project and the students are expected to
 make a final presentation. The professor will give short tutorials on
-research methodology and tools. These will include Excel or Google
+research methodology and tools. These include Excel or Google
 Sheets or Python code programming (optional), writing a good research
 paper using Microsoft Word, Overleaf, or other latex typesetting
 software for professional report writing, and using Google Scholar and
@@ -17,12 +17,12 @@ ChatGPT as research assistants.
 
 ## Research Projects
 
-#### Photovoltaic Solar Cell Technology
+### Photovoltaic Solar Cell Technology
 
 Silicon-based solar cell technology is a cornerstone of modern renewable
 energy systems, providing an efficient and sustainable means to harness
-solar energy. This project invites undergraduate students to explore the
-key principles and applications of silicon photovoltaics. Students will
+solar energy. This project invites undergraduate students to explore silicon photovoltaics'
+key principles and applications. Students will
 gain insights into the photoelectric effect, bandgap energy, and
 spectral absorption properties that underlie the conversion of sunlight
 into electricity.
@@ -46,17 +46,17 @@ lifecycle emissions. By the end of the project, students will have a
 comprehensive understanding of silicon-based solar cell technology and
 its pivotal role in the transition to sustainable energy systems.
 
-##### Grading Rubric for Solar Project
+#### Grading Rubric for Solar Project
 
 **Total Points: 100**\
 The grade is divided into **Project Report (75 points)** and
 **Final Presentation (25 points)**.
 
-##### 1. Project Report (75 points)
+ 1. Project Report (75 points)
 
 The report will be evaluated based on the following components:
 
-##### A. Review of the literature (15 points) 
+ A. Review of the literature (15 points) 
 
 -   **Comprehensiveness (10 points)**:
 
@@ -69,7 +69,7 @@ The report will be evaluated based on the following components:
 
     -   Written clearly and logically with well-organized sections.
 
-##### B. Manufacturing processes (20 points) 
+ B. Manufacturing processes (20 points) 
 
 -   **Detail and Accuracy (10 points)**:
 
@@ -81,7 +81,7 @@ The report will be evaluated based on the following components:
 
     -   Data are well organized using tables, graphs, or illustrations.
 
-##### C. Physics of Solar Photovoltaics (25 points) 
+ C. Physics of Solar Photovoltaics (25 points) 
 
 -   **Solid state physics princip5es (10 points)**:
 
@@ -99,7 +99,7 @@ The report will be evaluated based on the following components:
     -   Provides an understanding of the components needed to connect
         solar cells to the electric grid.
 
-##### D. Economic and Environmental Anal5sis (10 points) 
+ D. Economic and Environmental Analysis (10 points) 
 
 -   **Economic Feasibility (5 points)**:
 
@@ -109,7 +109,7 @@ The report will be evaluated based on the following components:
 
     -   Addresses life-cycle emissions and sustainability factor#s.
 
-#### E. Report Quality (5 points) 
+ E. Report Quality (5 points) 
 
 -   **Organization and Flow (3 points)**:
 
@@ -119,7 +119,7 @@ The report will be evaluated based on the following components:
 
     -   Free of major grammatical errors and formatted consistent#ly.
 
-#### F. Extra Credit: Python Code and Simulation (20 points) 
+ F. Extra Credit: Python Code and Simulation (20 points) 
 
 -   **Correctness (10 points)**:
 
@@ -136,11 +136,11 @@ The report will be evaluated based on the following components:
 
     -   The code is well-documented with comments explaining lo#gic.
 
-#### 2. Final presentation (25 points) 
+ 2. Final presentation (25 points) 
 
 The presentation will be evaluated based on the following compon#ents:
 
-#### A. Delivery and communication (10 points) 
+ A. Delivery and communication (10 points) 
 
 -   **Clarity and Confidence (5 points)**:
 
@@ -154,7 +154,7 @@ The presentation will be evaluated based on the following compon#ents:
 
     -   The team responds effectively to the ques#tions.
 
-#### B. Content Coverage (15 points) 
+ B. Content Coverage (15 points) 
 
 -   **Introduction and Objectives (5 points)**:
 
@@ -169,7 +169,7 @@ The presentation will be evaluated based on the following compon#ents:
 
     -   Summarizes findings and provides actionab
  
-### Grading Rubric
+#### Grading Summary
 :::{table} Grading Rubric for Solar Project
 | **Category**                          | **Points** |
 |---------------------------------------|------------|
@@ -191,7 +191,7 @@ The presentation will be evaluated based on the following compon#ents:
 
 
 
-## The Organic Rankine Cycle in Renewable Energy
+### The Organic Rankine Cycle in Renewable Energy
 
 The organic Rankine Cycle (ORC) is a crucial technology in the renewable
 energy sector, offering a pathway to harness low-grade heat sources for
@@ -215,7 +215,7 @@ economic and environmental factors. By the end of this project,
 participants will have a comprehensive understanding of ORC technology
 and its pivotal role in the advancement of renewab.
 
- #### Grading Rubric for the Organic Rankine Cycle
+#### Grading Rubric for the Organic Rankine Cycle
 
 
 
@@ -225,7 +225,7 @@ The grade is divided into **Project Report (75 points)** and **Final Presentatio
 
 
 
-#### 1. Project Report (75 points)
+ 1. Project Report (75 points)
 
 
 
@@ -233,7 +233,7 @@ The report will be evaluated based on the following components:
 
 
 
-#### A. Review of the Literature (15 points)
+ A. Review of the Literature (15 points)
 
 
 
@@ -251,7 +251,7 @@ The report will be evaluated based on the following components:
 
 
 
-#### B. Thermodynamic Analysis & Design (25 points)
+ B. Thermodynamic Analysis & Design (25 points)
 
 
 
@@ -281,7 +281,7 @@ The report will be evaluated based on the following components:
 
 
 
-#### C. Economic Feasibility (15 points)
+ C. Economic Feasibility (15 points)
 
 
 
@@ -299,7 +299,7 @@ The report will be evaluated based on the following components:
 
 
 
-#### D. Environmental Analysis (10 points)
+ D. Environmental Analysis (10 points)
 
 
 
@@ -315,7 +315,7 @@ The report will be evaluated based on the following components:
 
 
 
-#### E. Report Quality (10 points)
+ E. Report Quality (10 points)
 
 
 
@@ -331,7 +331,7 @@ The report will be evaluated based on the following components:
 
 
 
-#### F. Extra Credit - Thermodynamic Simulations - 20 points
+ F. Extra Credit - Thermodynamic Simulations - 20 points
 
 
 
@@ -355,7 +355,7 @@ The report will be evaluated based on the following components:
 
 
 
-#### 2. Final Presentation (25 points)
+ 2. Final Presentation (25 points)
 
 
 
@@ -363,7 +363,7 @@ The presentation will be evaluated based on the following components:
 
 
 
-#### A. Delivery and Communication (10 points)
+ A. Delivery and Communication (10 points)
 
 
 
@@ -383,7 +383,7 @@ The presentation will be evaluated based on the following components:
 
 
 
-#### B. Content Coverage (15 points)
+ B. Content Coverage (15 points)
 
 
 
@@ -404,7 +404,7 @@ The presentation will be evaluated based on the following components:
   - Summarizes findings and provides actionable insights.
 
 
-### Grading Rubric
+#### Grading Summary
 :::{table} Grading Rubric for the ORC Project
 
 | **Category**                          | **Points** |
@@ -425,7 +425,7 @@ The presentation will be evaluated based on the following components:
 :::
 
 
-## Design of a Hydro Power Plant
+### Design of a Hydro Power Plant
 
 Hydropower remains one of the most reliable and sustainable forms of
 renewable energy, offering opportunities for small-scale applications to
@@ -457,7 +457,7 @@ Presentation (25 points)**.
 
 The report will be evaluated based on the following components:
 
-#### A. Litereature Review (15 points)
+ A. Litereature Review (15 points)
 
 -   **Comprehensiveness (10 points)**:
 
@@ -482,7 +482,7 @@ The report will be evaluated based on the following components:
 
     -   Data is we#ll-organielectricraphs, or charts.
 
-#### B. Hydroelectric plant performance evaluation (25 points)
+ B. Hydroelectric plant performance evaluation (25 points)
 
 -   **Fundamental Principles of Hydro Power (15 points)**:
 
@@ -499,7 +499,7 @@ The report will be evaluated based on the following components:
 
     -   Calculations of  the head and flow rate for a selected t urbine.
 
-#### C. Economic and environmental analysis (15 points)
+ C. Economic and environmental analysis (15 points)
 
 -   **Economic Viability (5 points)**:
 
@@ -508,10 +508,10 @@ The report will be evaluated based on the following components:
 
 -   **Environmental Impact (10 points)**:
 
-    -   Addresses potential environme#### E. C-offs or s stainabi lity
+    -   Addresses potential environme E. C-offs or s stainabi lity
        factors.
 
-### D. Comparative analysis (10 points)
+ D. Comparative analysis (10 points)
 
 -   **Depth of Comparison (5 points)**:
 
@@ -522,7 +522,7 @@ The report will be evaluated based on the following components:
 
     -   Provides meaningful conclusions based on the comparisopoints
     
-### E. Rport quality (5-points)
+ E. Report quality (5-points)
 
 -   **Organization and Flow (3 points)**:
 
@@ -532,11 +532,11 @@ The report will be evaluated based on the following components:
 
     -   Free of major grammatical errors and formatted consistently
     
-### Final presentation (25 points)
+ Final presentation (25 points)
 
 The presentation will be evaluated based on the following components:
 
-#### A. Delivery and communication (10 points)
+ A. Delivery and communication (10 points)
 
 -   **Clarity and Confidence (5 points)**:
 
@@ -550,7 +550,7 @@ The presentation will be evaluated based on the following components:
 
     -  Team responds effectively to the questions.
 
-### B. Content coverage (15 points)
+ B. Content coverage (15 points)
 
 -   **Introduction and Objectives (5 points)**:
 
@@ -584,9 +584,9 @@ The presentation will be evaluated based on the following components:
 :::
 
 
-## Wind Energy: Design and Environmental Impact
+### Wind Energy: Design and Environmental Impact
 
-### Overview
+#### Overview
 
 Wind energy is a key renewable energy technology that uses the kinetic
 energy of the wind to generate electricity. This project aims to explore
@@ -674,7 +674,7 @@ tools (e.g., Microsoft Excel or Google Sheets), and case studies to
 complete the project. Guidance on d#ata visualization and calculations
 will be provided during the course.
 
-#### Grading Rubric
+#### Grading Summary
 
 This project combines theoretical knowledge with practical skills,
 equipping students to analyze, model, and optimize wind energy systems.
@@ -704,7 +704,7 @@ also understand the broader im#plications of renewable energy
 
 
 
-## Tidal Energy Technologies
+### Tidal Energy Technologies
 
 #### Overview 
 
@@ -788,7 +788,7 @@ reports, and spreadsheet tools (e.g., Microsoft Excel or Google Sheets)
 to perform calculations and analyze data. Te#mplates and guidance on
 spreadsheet use will be provided during the course.
 
-#### Grading Rubric 
+#### Grading Summary 
 
 :::{table} Grading Rubric
 :name: grading-rubric-tidal
@@ -809,6 +809,7 @@ spreadsheet use will be provided during the course.
 
 :::
 
+### Geothermal Energy
 
 This project aims to combine theoretical understanding with practical
 skills, equipping students to critically evaluate Deep Geothermal Energy: Physical Principles and Technology Evaluation
@@ -901,7 +902,7 @@ Students will use scientific literature, technical reports, and spreadsheet tool
 
 
 
-#### Grading Rubric
+#### Grading Summary
 
 
 
@@ -1009,7 +1010,7 @@ By the end of this project, students will:
 Students will use scientific articles, technical reports, and spreadsheet tools (e.g., Microsoft Excel or Google Sheets) to perform calculations and analyze data. Templates and examples will be provided to support spreadsheet modeling.
 
 
-#### Grading Rubric
+#### Grading Summary
 
 
 :::{table} Grading Rubric for Biofuel Technology Project
@@ -1127,7 +1128,7 @@ Students will use scientific literature, technical reports, and spreadsheet tool
 
 
 
-#### Grading Rubric
+#### Grading Summary
 
 
 :::{table} Grading Rubric for Wave Energy Project

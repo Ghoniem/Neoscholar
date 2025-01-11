@@ -4,7 +4,7 @@
 format: jb-book
 root: intro
 chapters:
-- file: 10WeekSyllabus
+- file: Syllabus
 - file: ProjectSyllabus
 # - file: Project_Instructions
 # - file: IdealRankine
