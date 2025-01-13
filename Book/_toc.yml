@@ -6,7 +6,7 @@ root: intro
 chapters:
 - file: Syllabus
 - file: ProjectSyllabus
-# - file: Project_Instructions
+- file: ProjectInstructions
 # - file: IdealRankine
 # - file: HydroPower
 # - file: Ethanol
