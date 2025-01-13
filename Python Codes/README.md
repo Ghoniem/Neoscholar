@@ -1,2 +1,0 @@
-# Neoscholar
- Neoscholar Educational Materials
