@@ -5,7 +5,6 @@ format: jb-book
 root: intro
 chapters:
 - file: Syllabus
-- file: ProjectSyllabus
 - file: ProjectInstructions
 # - file: IdealRankine
 # - file: HydroPower
